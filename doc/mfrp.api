@@ -1,0 +1,18 @@
+info(
+	title: "mfrp admin"
+	desc: "mfrp admin"
+	author: "essen"
+	email: "hoksum.guo@gmail.com"
+)
+
+import "api/admin.api"
+
+@server(
+	group: mfrp/test
+	prefix: /api
+)
+
+service mfrp-api {
+	@handler mfrpPing
+	get /ping
+}
